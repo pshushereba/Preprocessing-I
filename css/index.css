@@ -137,30 +137,102 @@ body {
 html {
   font-size: 62.5%;
 }
+.flexbox-setup {
+  display: flex;
+  flex-wrap: wrap;
+}
 .container {
   max-width: 800px;
   width: 100%;
-  margin: 0 2.5%;
+  margin: 0 auto;
 }
-.container ul {
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   font-size: 1.6rem;
+  justify-content: flex-end;
+  margin: 10px 20px;
 }
-.container .top-content {
+header nav ul li a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: #000;
+}
+.top-content {
   background: lightgray;
+  display: flex;
+  flex-wrap: wrap;
 }
-.container .top-content img {
-  height: 400px;
-  width: 400px;
+.top-content .tc-img-container {
+  display: flex;
+  flex-wrap: wrap;
 }
-.container .top-content h1 {
+.top-content .tc-img-container img {
+  height: 350px;
+  width: 350px;
+  padding: 20px;
+  margin: 20px;
+}
+.top-content .tc-content {
+  width: 50%;
+}
+.top-content .tc-content h1 {
   font-size: 4rem;
+  margin-top: 20px;
+  padding-top: 20px;
 }
-.container .top-content h2 {
+.top-content .tc-content h2 {
   font-size: 2.5rem;
+  margin-top: 20px;
+  padding-top: 20px;
 }
-.container .mid-content h2 {
-  font-size: 2.5rem;
-}
-.container .mid-content p {
+.top-content .tc-content p {
   font-size: 1.6rem;
+  padding: 20px 0;
+}
+.top-content .tc-content button {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-size: 1.3rem;
+}
+.mid-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mid-content .summary {
+  width: 50%;
+}
+.mid-content .summary h2 {
+  font-size: 2.5rem;
+  margin: 20px auto;
+}
+.mid-content .summary p {
+  font-size: 1.6rem;
+}
+.mid-content .skill-list {
+  width: 50%;
+  margin: 20px auto;
+}
+.mid-content .skill-list h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.mid-content .skill-list p {
+  font-size: 1.6rem;
+}
+.mid-content .skill-list ul {
+  text-align: center;
+}
+.mid-content .skill-list ul li {
+  padding: 20px;
+  font-size: 1.6rem;
+  border: 1px solid gray;
+}
+.bottom-content table {
+  width: 100%;
 }

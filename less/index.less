@@ -61,39 +61,126 @@ html {
 	font-size: 62.5%;
 }
 
+@h2-size: 2.5rem;
+
+.flexbox-setup {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .container {
 	max-width: 800px;
 	width: 100%;
-	margin: 0 2.5%;
+	margin: 0 auto;
+}
 
-	ul {
-		font-size: 1.6rem;
+header {
+
+	nav {
+		ul {
+			.flexbox-setup();
+			flex-direction: row;
+			font-size: 1.6rem;
+			justify-content: flex-end;
+			margin: 10px 20px;
+
+			li a {
+				padding: 0 20px;
+				text-decoration: none;
+				color: #000;
+			}
+		}
+	}
+}
+
+.top-content {
+	background: lightgray;
+	.flexbox-setup(); // First type of mixin
+	
+	.tc-img-container {
+		.flexbox-setup();
+		img {
+			height: 350px;
+			width: 350px;
+			padding: 20px;
+			margin: 20px;
+		}
 	}
 
-	.top-content {
-		background: lightgray;
-
-		img {
-			height: 400px;
-			width: 400px;
-
-		}
+	.tc-content {
+		width: 50%;
 		h1 {
 			font-size: 4rem;
+			margin-top: 20px;
+			padding-top: 20px;
 		}
-
+	
 		h2 {
-			font-size: 2.5rem;
-		}
-	}
-
-	.mid-content {
-		h2 {
-			font-size: 2.5rem;
+			font-size: @h2-size;
+			margin-top: 20px;
+			padding-top: 20px;
 		}
 
 		p {
 			font-size: 1.6rem;
+			padding: 20px 0;
 		}
+
+		button {
+			width: 150px;
+			height: 50px;
+			border-radius: 30px;
+			background: rgba(0, 0, 0, 0.5);
+			color: #FFF;
+			font-size: 1.3rem;
+		}
+	}
+}
+
+.mid-content {
+	.flexbox-setup();
+	
+	.summary {
+		width: 50%;
+
+		h2 {
+			font-size: @h2-size;
+			margin: 20px auto;
+		}
+	
+		p {
+			font-size: 1.6rem;
+		}
+	}
+
+	.skill-list {
+		width: 50%;
+		margin: 20px auto;
+
+		h2 {
+			font-size: @h2-size;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+	
+		p {
+			font-size: 1.6rem;
+		}
+
+		ul {
+			text-align: center;
+
+			li {
+				padding: 20px;
+				font-size: 1.6rem;
+				border: 1px solid gray;
+			}
+		}
+	}
+}
+
+.bottom-content {
+	table {
+		width: 100%;
 	}
 }
