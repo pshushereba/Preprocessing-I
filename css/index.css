@@ -135,5 +135,32 @@ body {
   height: 100%;
 }
 html {
-  background: red;
+  font-size: 62.5%;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 2.5%;
+}
+.container ul {
+  font-size: 1.6rem;
+}
+.container .top-content {
+  background: lightgray;
+}
+.container .top-content img {
+  height: 400px;
+  width: 400px;
+}
+.container .top-content h1 {
+  font-size: 4rem;
+}
+.container .top-content h2 {
+  font-size: 2.5rem;
+}
+.container .mid-content h2 {
+  font-size: 2.5rem;
+}
+.container .mid-content p {
+  font-size: 1.6rem;
 }
