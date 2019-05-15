@@ -141,6 +141,10 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
+.hover-effect li:hover {
+  background-color: darkgray;
+  color: white;
+}
 .container {
   max-width: 800px;
   width: 100%;
@@ -158,6 +162,10 @@ header nav ul li a {
   padding: 0 20px;
   text-decoration: none;
   color: #000;
+}
+header nav ul li:hover {
+  background-color: darkgray;
+  color: white;
 }
 .top-content {
   background: lightgray;
@@ -212,6 +220,8 @@ header nav ul li a {
 }
 .mid-content .summary p {
   font-size: 1.6rem;
+  padding-right: 40px;
+  line-height: 2.7rem;
 }
 .mid-content .skill-list {
   width: 50%;
@@ -228,11 +238,33 @@ header nav ul li a {
 .mid-content .skill-list ul {
   text-align: center;
 }
+.mid-content .skill-list ul li:hover {
+  background-color: darkgray;
+  color: white;
+}
 .mid-content .skill-list ul li {
   padding: 20px;
   font-size: 1.6rem;
   border: 1px solid gray;
 }
+.bottom-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 .bottom-content table {
   width: 100%;
+  font-size: 1.6rem;
+  padding: 10px;
+}
+.bottom-content table tr {
+  border: 1px solid gray;
+  text-align: center;
+  padding: 15px;
+  margin: 15px;
+}
+.bottom-content table tr :nth-child(2n) {
+  color: dodgerblue;
+}
+.bottom-content table td {
+  padding: 15px;
 }

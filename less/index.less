@@ -61,11 +61,19 @@ html {
 	font-size: 62.5%;
 }
 
-@h2-size: 2.5rem;
+@text-large: 2.5rem;
+@text-medium: 1.6rem;
 
 .flexbox-setup {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.hover-effect {
+	li:hover {
+		background-color: darkgray;
+		color: white;
+	}
 }
 
 .container {
@@ -80,7 +88,7 @@ header {
 		ul {
 			.flexbox-setup();
 			flex-direction: row;
-			font-size: 1.6rem;
+			font-size: @text-medium;
 			justify-content: flex-end;
 			margin: 10px 20px;
 
@@ -89,6 +97,8 @@ header {
 				text-decoration: none;
 				color: #000;
 			}
+			
+			.hover-effect();
 		}
 	}
 }
@@ -116,13 +126,13 @@ header {
 		}
 	
 		h2 {
-			font-size: @h2-size;
+			font-size: @text-large;
 			margin-top: 20px;
 			padding-top: 20px;
 		}
 
 		p {
-			font-size: 1.6rem;
+			font-size: @text-medium;
 			padding: 20px 0;
 		}
 
@@ -144,12 +154,14 @@ header {
 		width: 50%;
 
 		h2 {
-			font-size: @h2-size;
+			font-size: @text-large;
 			margin: 20px auto;
 		}
 	
 		p {
-			font-size: 1.6rem;
+			font-size: @text-medium;
+			padding-right: 40px;
+			line-height: 2.7rem;
 		}
 	}
 
@@ -158,21 +170,23 @@ header {
 		margin: 20px auto;
 
 		h2 {
-			font-size: @h2-size;
+			font-size: @text-large;
 			margin-bottom: 20px;
 			text-align: center;
 		}
 	
 		p {
-			font-size: 1.6rem;
+			font-size: @text-medium;
 		}
 
 		ul {
 			text-align: center;
 
+			.hover-effect();
+
 			li {
 				padding: 20px;
-				font-size: 1.6rem;
+				font-size: @text-medium;
 				border: 1px solid gray;
 			}
 		}
@@ -180,7 +194,29 @@ header {
 }
 
 .bottom-content {
+	h2 {
+		font-size: @text-large;
+		margin-bottom: 20px;
+	}
 	table {
 		width: 100%;
+		font-size: @text-medium;
+		padding: 10px;
+		
+		tr {
+			border: 1px solid gray;
+			text-align: center;
+			padding: 15px;
+			margin: 15px;
+
+			:nth-child(2n) {
+				color: dodgerblue;
+			}
+		}
+
+		td {
+			padding: 15px;
+		}
+
 	}
 }
